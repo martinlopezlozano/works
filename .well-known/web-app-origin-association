@@ -1,0 +1,16 @@
+{
+    "web_apps": [
+        {
+            "manifest": "https://martinlopezlozano.github.io/proceed/manifest.json",
+            "details": {
+                "paths": ["/*"]
+            }
+        },
+        {
+            "manifest": "https://martinlopezlozano.github.io/works/manifest.json",
+            "details": {
+                "paths": ["/*"]
+            }
+        }
+    ]
+}
