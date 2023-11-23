@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TecOS WORKS</title>
+	<link rel="manifest" href="./manifest.json">
+	<script>
+		if ("serviceWorker" in navigator){
+			navigator.serviceWorker.register("sw.js");
+		}
+	</script>
+</head>
+<body>
+	<h1>TecOS WORKS</h1>
+	<h2>Introduce un texto para enviar a PROCEED y mostrar una alerta de forma inmediata:</h2>
+	<input type="text" id="textoAlerta" placeholder="Escribe algo aquí">    	
+	<button onclick="sendProceedAlerta()">Enviar</button>
+
+	<h2>Introduce un texto para enviar a PROCEED y guardarlo en una variable:</h2>
+	<input type="text" id="textoVariable" placeholder="Escribe algo aquí">    	
+	<button onclick="sendProceedVariable()">Enviar</button>
+
+    <h2>Abre PROCEED</h2>
+	<button onclick="openProceed()">Abrir</button>
+
+	<h2>Abre GOOGLE</h2>
+	<button onclick="openGoogle()">Abrir</button>
+	
+	<script>
+	
+		function sendProceedAlerta() {
+			var canal1 = new BroadcastChannel("canal1");			
+			var textoAlerta = document.getElementById("textoAlerta").value;
+			canal1.postMessage("El texto enviado por TecOS WORKS a PROCEED es: " + textoAlerta);
+			alert("Enviado texto: " + textoAlerta);
+		}
+
+		function sendProceedVariable() {
+			var canal2 = new BroadcastChannel("canal2");			
+			var textoVariable = document.getElementById("textoVariable").value;
+			canal2.postMessage("El texto enviado por TecOS WORKS a PROCEED es: " + textoVariable);
+			alert("Enviado texto: " + textoVariable);
+		}
+
+		function openProceed() {
+			window.open("https://martinlopezlozano.github.io/proceed");
+		}
+
+		function openGoogle() {
+			window.open("https://www.google.es");
+		}
+
+    </script>
+</body>
+</html>

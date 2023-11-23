@@ -1,0 +1,38 @@
+{
+	"name": "TecOS WORKS",
+	"short_name": "WORKS",
+	"theme_color": "#ffe08a",
+	"background_color": "#ffe08a",
+	"display": "standalone",
+	"orientation": "portrait",
+	"scope": "./",
+	"start_url": "./",
+	"icons": [
+		{
+			"src": "./pwa.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"screenshots": [
+   		 {
+     			"src": "./fondo.png",
+      			"sizes": "640x320",
+      			"type": "image/png",
+      			"form_factor": "wide",
+      			"label": "Wonder Widgets"
+    		}
+	],
+	"description": "PWA TecOS WORKS",
+	"url_handlers" : [
+		{
+      		"origin": "https://martinlopezlozano.github.io/works"
+    	},
+    	{
+      		"origin": "https://martinlopezlozano.github.io/proceed"
+    	},
+    	{
+      		"origin": "https://martinlopezlozano.github.io"
+    	}
+	]
+}
